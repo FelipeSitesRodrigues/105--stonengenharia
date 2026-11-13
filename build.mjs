@@ -276,20 +276,19 @@ function schema(html) {
     email: cfg.email,
     image: `${base}/assets/img/og.jpg`,
     logo: `${base}/apple-touch-icon.png`,
-    // base em Cuiabá/MT (o José confirmou em 2026-11-12). Rua e CEP entram quando ele mandar
+    // base em Campo Grande/MS (o José confirmou em 2026-11-13: "Estou localizado em Campo Grande / MS")
     address: { '@type': 'PostalAddress', addressLocality: cfg.cidade, addressRegion: cfg.uf, addressCountry: 'BR' },
     areaServed: [
-      { '@type': 'City', name: 'Cuiabá', containedInPlace: { '@type': 'State', name: 'Mato Grosso' } },
-      { '@type': 'City', name: 'Várzea Grande', containedInPlace: { '@type': 'State', name: 'Mato Grosso' } },
-      { '@type': 'State', name: 'Mato Grosso' },
+      { '@type': 'City', name: 'Campo Grande', containedInPlace: { '@type': 'State', name: 'Mato Grosso do Sul' } },
+      { '@type': 'State', name: 'Mato Grosso do Sul' },
     ],
     slogan: 'Engenharia de segurança e conformidade para a indústria',
     sameAs: [cfg.instagram],
-    knowsAbout: ['NR-13', 'NR-35', 'NR-12', 'NR-33', 'PMOC', 'Vasos de pressão', 'Caldeiras', 'Linha de vida', 'Teste de estanqueidade', 'Calibração de manômetros', 'Válvula de segurança'],
+    knowsAbout: ['Engenharia mecânica', 'NR-13', 'NR-35', 'NR-12', 'NR-33', 'PMOC', 'Vasos de pressão', 'Caldeiras', 'Linha de vida', 'Teste de estanqueidade', 'Calibração de manômetros', 'Válvula de segurança'],
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
       name: 'Serviços de engenharia de segurança e conformidade',
-      itemListElement: servicos.map((n) => ({ '@type': 'Offer', itemOffered: { '@type': 'Service', name: n, serviceType: n, areaServed: { '@type': 'City', name: 'Cuiabá' }, provider: { '@id': `${base}/#ston` } } })),
+      itemListElement: servicos.map((n) => ({ '@type': 'Offer', itemOffered: { '@type': 'Service', name: n, serviceType: n, areaServed: { '@type': 'City', name: 'Campo Grande' }, provider: { '@id': `${base}/#ston` } } })),
     },
   }
   if (base) negocio.url = `${base}/`

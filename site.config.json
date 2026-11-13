@@ -6,17 +6,16 @@
   "email": "joseroberto@stonengenharia.com.br",
   "instagram": "https://www.instagram.com/stonengenharia_/",
   "instagramArroba": "@stonengenharia_",
-  "descricao": "Engenharia de segurança e conformidade em Cuiabá/MT: inspeção NR-13 de caldeiras e vasos de pressão, linha de vida NR-35, PMOC, teste de estanqueidade de gás, calibração de válvulas e manômetros, projetos, consultoria e treinamentos NR, com laudo e ART.",
+  "descricao": "Engenharia mecânica, segurança e conformidade em Campo Grande/MS: inspeção NR-13 de caldeiras e vasos de pressão, linha de vida NR-35, PMOC, teste de estanqueidade de gás, calibração de válvulas e manômetros, projetos, consultoria e treinamentos NR, com laudo e ART.",
   "pendencias": [
     "indexar false e dominio vazio até publicar",
     "licença da fonte TT Supermolot Neue (arquivo é trial)",
     "cidades atendidas, CNPJ, horário, endereço comercial",
     "nome My Eng x Ston; depoimentos",
     "fotos são imagens geradas no ChatGPT (ilustrativas) até chegarem as reais",
-    "base em Cuiabá/MT (José, 2026-11-12), mas o telefone é DDD 67 (MS): confirmar número e endereço",
-    "confirmar cidades atendidas além de Cuiabá e Várzea Grande (FAQ e schema)",
-    "CREA na esteira de clientes: confirmar se foi cliente mesmo (é o conselho)"
+    "CREA na esteira de clientes: confirmar se foi cliente mesmo (é o conselho)",
+    "confirmar cidades atendidas além de Campo Grande (FAQ e schema)"
   ],
-  "cidade": "Cuiabá",
-  "uf": "MT"
+  "cidade": "Campo Grande",
+  "uf": "MS"
 }

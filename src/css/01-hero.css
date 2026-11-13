@@ -127,7 +127,9 @@
     grid-template-areas: '. rotulo .' '. titulo .' '. . .' '. texto .' '. botoes .' 'provas provas provas';
   }
   .hero__conteudo { display: contents; }
-  .hero__rotulo { grid-area: rotulo; justify-self: start; }
+  /* "Engenharia Mecânica em Campo Grande/MS" cabe numa linha só: letra e espaçamento acompanham a largura */
+  .hero__rotulo { grid-area: rotulo; justify-self: start; gap: 9PX; font-size: clamp(8.5PX, 2.75vw, 12.5PX); letter-spacing: .1em; white-space: nowrap; }
+  .hero__rotulo::before { width: 16PX; height: 7PX; }
   .hero__titulo-linha { grid-area: titulo; margin: 16PX 0 0; font-size: clamp(28PX, 8.4vw, 36PX); }
   .hero__titulo { line-height: 1.12; }
   .hero__icones { display: flex; width: max-content; margin: 14PX 0 0; }
