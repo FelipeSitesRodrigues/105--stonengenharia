@@ -185,3 +185,12 @@ p { text-wrap: pretty; }
   .botoes > .botao { flex: 1 1 auto; }
   .botao { min-height: 52PX; padding: 0 22PX; font-size: 15.5PX; }
 }
+
+/* ---------------------------------------------------------------- Lenis (99-rolagem.js)
+   CSS que o Lenis pede: com ele ligado, o scroll-behavior smooth do html sai do caminho (senão
+   as duas suavizações brigam) e iframe não rouba a roda no meio do deslize.                  */
+html.lenis, html.lenis body { height: auto; }
+.lenis:not(.lenis-autoToggle).lenis-stopped { overflow: clip; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+.lenis.lenis-smooth iframe { pointer-events: none; }
