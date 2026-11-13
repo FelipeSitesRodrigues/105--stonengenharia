@@ -281,14 +281,15 @@ function schema(html) {
     areaServed: [
       { '@type': 'City', name: 'Campo Grande', containedInPlace: { '@type': 'State', name: 'Mato Grosso do Sul' } },
       { '@type': 'State', name: 'Mato Grosso do Sul' },
+      { '@type': 'Country', name: 'Brasil' },
     ],
-    slogan: 'Engenharia de segurança e conformidade para a indústria',
+    slogan: 'Engenharia e consultoria para sua empresa',
     sameAs: [cfg.instagram],
     knowsAbout: ['Engenharia mecânica', 'NR-13', 'NR-35', 'NR-12', 'NR-33', 'PMOC', 'Vasos de pressão', 'Caldeiras', 'Linha de vida', 'Teste de estanqueidade', 'Calibração de manômetros', 'Válvula de segurança'],
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
       name: 'Serviços de engenharia de segurança e conformidade',
-      itemListElement: servicos.map((n) => ({ '@type': 'Offer', itemOffered: { '@type': 'Service', name: n, serviceType: n, areaServed: { '@type': 'City', name: 'Campo Grande' }, provider: { '@id': `${base}/#ston` } } })),
+      itemListElement: servicos.map((n) => ({ '@type': 'Offer', itemOffered: { '@type': 'Service', name: n, serviceType: n, areaServed: { '@type': 'Country', name: 'Brasil' }, provider: { '@id': `${base}/#ston` } } })),
     },
   }
   if (base) negocio.url = `${base}/`
