@@ -1,0 +1,7 @@
+insumos/
+.tmp/
+dist/preview/
+revisao/
+.impeccable/review/
+lighthouse/
+node_modules

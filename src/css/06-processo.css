@@ -1,0 +1,57 @@
+/* ---------------------------------------------------------------- como trabalhamos
+   Linha do tempo de 5 passos: círculos numerados em azul ligados por um fio cinza que se
+   desenha (scaleX) quando a lista entra. No celular a linha vira vertical, à esquerda.      */
+.passos { position: relative; display: grid; grid-template-columns: repeat(5, 1fr); gap: 28px; margin-top: 60px; }
+/* o fio: atrás dos círculos, do centro do 1º ao centro do último */
+.passos::before {
+  content: '';
+  position: absolute;
+  left: 32px;
+  right: calc((100% - 112px) / 5 - 32px);
+  top: 31px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--azul), var(--cinza) 60%, var(--linha-clara));
+  transform-origin: left;
+}
+/* a lista tem data-revela="linha": ela não some, só o fio cresce */
+.js .passos[data-revela='linha'] { opacity: 1; transform: none; }
+.js .passos[data-revela='linha']::before { transform: scaleX(0); transition: transform 1.6s var(--ease) .2s; }
+.js .passos[data-revela='linha'].visivel::before { transform: none; }
+.passo { position: relative; }
+.passo__num {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  font-family: var(--fonte-titulo);
+  font-size: 18px;
+  color: #fff;
+  background: var(--azul);
+  box-shadow: 0 0 0 8px #fff, 0 14px 30px -14px rgb(0 0 72 / .6);
+}
+.passo h3 { margin-top: 26px; font-size: 18px; color: var(--azul); }
+.passo p { margin-top: 10px; font-size: 15px; line-height: 1.55; color: var(--tinta-2); max-width: 15em; }
+
+@media (prefers-reduced-motion: reduce) {
+  .js .passos[data-revela='linha']::before { transform: none; transition: none; }
+}
+
+@media (max-width: 74.99em) {
+  .passos { grid-template-columns: 1fr; gap: 0; margin-top: 40PX; }
+  .passos::before { left: 31PX; right: auto; top: 32PX; bottom: 32PX; width: 2PX; height: auto; background: linear-gradient(180deg, var(--azul), var(--cinza) 60%, var(--linha-clara)); transform-origin: top; }
+  .js .passos[data-revela='linha']::before { transform: scaleY(0); }
+  .passo { display: grid; grid-template-columns: 64PX 1fr; column-gap: 22PX; padding-bottom: 30PX; }
+  .passo:last-child { padding-bottom: 0; }
+  .passo__num { grid-row: span 2; }
+  .passo h3 { margin-top: 8PX; }
+  .passo p { max-width: 32em; margin-top: 6PX; }
+}
+@media (max-width: 47.99em) {
+  .passos::before { left: 25PX; top: 26PX; bottom: 26PX; }
+  .passo { grid-template-columns: 52PX 1fr; column-gap: 16PX; padding-bottom: 24PX; }
+  .passo__num { width: 52PX; height: 52PX; font-size: 15PX; box-shadow: 0 0 0 6PX #fff, 0 12PX 26PX -14PX rgb(0 0 72 / .6); }
+  .passo h3 { margin-top: 4PX; font-size: 16.5PX; }
+  .passo p { font-size: 14.5PX; }
+}

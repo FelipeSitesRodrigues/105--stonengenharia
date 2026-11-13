@@ -1,0 +1,41 @@
+<header class="topo" data-topo>
+  <div class="topo__barra caixa">
+    <a class="topo__logo" href="#inicio" aria-label="Ston Engenharia, voltar ao início">
+      <img src="/assets/img/logo-claro-480.webp" alt="" width="480" height="121">
+    </a>
+    <nav class="topo__menu" aria-label="Seções">
+      <a href="#inicio">Início</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#obras">Obras</a>
+      <a href="#processo">Como trabalhamos</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <div class="topo__acoes">
+      <a class="botao topo__botao" href="{{wa:Olá! Vim pelo site da Ston Engenharia e gostaria de um orçamento.}}" target="_blank" rel="noopener"><span class="topo__longo">Solicitar orçamento</span><span class="topo__curto">Orçamento</span></a>
+      <!-- menu do celular e do tablet: as 3 barrinhas abrem o painel com as seções (00-header.js) -->
+      <button class="topo__mais topo__barrinhas" type="button" aria-expanded="false" aria-controls="menu-celular" aria-label="Abrir menu" data-menu-abre><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="painel" id="menu-celular" role="dialog" aria-modal="true" aria-label="Menu" data-painel hidden>
+  <div class="painel__topo caixa">
+    <img src="/assets/img/logo-claro-480.webp" alt="" width="480" height="121">
+    <button class="topo__mais" type="button" aria-label="Fechar menu" data-menu-fecha><i data-i="x" data-w="bold"></i></button>
+  </div>
+  <nav class="painel__links caixa" aria-label="Seções">
+    <a href="#inicio" style="--i:0">Início</a>
+    <a href="#servicos" style="--i:1">Serviços</a>
+    <a href="#sobre" style="--i:2">Sobre</a>
+    <a href="#obras" style="--i:3">Obras</a>
+    <a href="#diferenciais" style="--i:4">Por que a Ston</a>
+    <a href="#processo" style="--i:5">Como trabalhamos</a>
+    <a href="#perguntas" style="--i:6">Perguntas frequentes</a>
+    <a href="#contato" style="--i:7">Contato</a>
+  </nav>
+  <div class="painel__base caixa">
+    <a class="botao botao--branco" href="{{wa:Olá! Vim pelo site da Ston Engenharia e gostaria de um orçamento.}}" target="_blank" rel="noopener"><i data-i="whatsapp-logo" data-w="regular"></i>Solicitar orçamento</a>
+    <p>{{cfg.telefone}} · Cuiabá/MT</p>
+  </div>
+</div>

@@ -1,0 +1,187 @@
+/* ---------------------------------------------------------------- fontes (self-hosted)
+   Títulos e corpo em Plus Jakarta Sans (800 nos títulos, aprovada pelo Felipe em 2026-11-12).
+   A TT Supermolot da marca saiu: o arquivo era trial e não pode ir pro repositório público.  */
+@font-face { font-family: 'Jakarta'; src: url(/assets/fonts/jakarta-500.woff2) format('woff2'); font-weight: 500; font-display: swap; }
+@font-face { font-family: 'Jakarta'; src: url(/assets/fonts/jakarta-600.woff2) format('woff2'); font-weight: 600; font-display: swap; }
+@font-face { font-family: 'Jakarta'; src: url(/assets/fonts/jakarta-700.woff2) format('woff2'); font-weight: 700; font-display: swap; }
+@font-face { font-family: 'Jakarta'; src: url(/assets/fonts/jakarta-800.woff2) format('woff2'); font-weight: 800; font-display: swap; }
+/* reservas com a métrica de cada fonte, pra a troca não empurrar o layout */
+@font-face { font-family: 'Jakarta fallback'; src: local('Arial'); size-adjust: 104%; ascent-override: 96%; descent-override: 21%; line-gap-override: 0%; }
+
+/* ---------------------------------------------------------------- tokens
+   Paleta da Ston: azul #000048, cinza #808080 e branco. O cinza é a cor de destaque (é o
+   "ENGENHARIA" do logo); no fundo azul o destaque vai no cinza claro das barras do "S".   */
+:root {
+  color-scheme: light;
+  --azul: #000048;
+  --azul-2: #0B0B5E;
+  --profundo: #00002E;
+  --cinza: #808080;
+  --cinza-escuro: #6B6E7A;
+  --cinza-claro: #E6E6EA;
+  --gelo: #F3F4F7;
+  --branco: #FFFFFF;
+  --tinta: #0B0B2E;
+  --tinta-2: #565B6E;
+  --linha-clara: #DDDFE7;
+  --texto-escuro: rgb(255 255 255 / .74);
+  --linha-escura: rgb(255 255 255 / .14);
+
+  --fonte: 'Jakarta', 'Jakarta fallback', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+  --fonte-titulo: 'Jakarta', 'Jakarta fallback', system-ui, Arial, sans-serif; /* TESTE: fonte da Geomon no lugar da Supermolot */
+  --largura: 1240px;
+  --raio: 40px;
+  --raio-card: 24px;
+
+  --ease: cubic-bezier(.22, 1, .36, 1);
+  --ease-hover: cubic-bezier(.4, 0, .2, 1);
+}
+@media (max-width: 47.99em) {
+  :root { --raio: 26px; --raio-card: 20px; }
+}
+
+/* ---------------------------------------------------------------- escala
+   1 rem = 16 px em 1440x900. Acima de 1200 o rem acompanha a largura e a altura da janela, o
+   que for menor (base da 0100): a composição de 1440x900 vale em qualquer tela larga.        */
+html { font-size: 100%; }
+@media (min-width: 75em) {
+  html { font-size: max(14.5PX, min(100vw / 90, 100vh / 56.25)); }
+}
+
+/* ---------------------------------------------------------------- reset */
+*, *::before, *::after { box-sizing: border-box; }
+* { margin: 0; }
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 88px;
+  background: var(--profundo);
+}
+body {
+  min-height: 100vh;
+  background: var(--branco);
+  color: var(--tinta);
+  font: 500 17px/1.6 var(--fonte);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: clip;
+}
+img, picture, svg, video { display: block; max-width: 100%; }
+img { height: auto; }
+a { color: inherit; text-decoration: none; }
+ul, ol { list-style: none; padding: 0; }
+button { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; }
+h1, h2, h3 { font-family: var(--fonte-titulo); font-weight: 500; letter-spacing: -.01em; line-height: 1.1; text-wrap: balance; }
+p { text-wrap: pretty; }
+::selection { background: var(--azul); color: #fff; }
+:focus-visible { outline: 2px solid var(--cinza); outline-offset: 3px; border-radius: 8px; }
+.i { width: 1em; height: 1em; fill: currentColor; flex: none; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.pular { position: fixed; left: 16px; top: -60px; z-index: 100; padding: 10px 18px; border-radius: 99px; background: var(--azul); color: #fff; font-weight: 700; transition: top .3s var(--ease); }
+.pular:focus { top: 16px; }
+
+/* ---------------------------------------------------------------- seções
+   A seção de baixo sobe com os cantos de cima arredondados por cima da de cima (base da 0100). */
+.secao { position: relative; padding: 112px 0; }
+.secao--sobe { margin-top: calc(var(--raio) * -1); border-radius: var(--raio) var(--raio) 0 0; z-index: 1; }
+.secao:has(+ .secao--sobe) { padding-bottom: calc(112px + var(--raio)); }
+.secao--branco { background: var(--branco); color: var(--tinta); }
+.secao--gelo { background: var(--gelo); color: var(--tinta); }
+.secao--azul { background: var(--azul); color: #fff; }
+.caixa { width: min(100% - 40PX, var(--largura)); margin-inline: auto; position: relative; }
+.escuro { color: #fff; }
+
+/* ---------------------------------------------------------------- rótulo, títulos, texto
+   Rótulo em caixa alta espaçada, como o "ENGENHARIA" do logo, com o mini-chevron do "S".  */
+.rotulo {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .22em;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: var(--cinza-escuro);
+}
+.rotulo::before {
+  content: '';
+  flex: none;
+  width: 22px;
+  height: 9px;
+  background: currentColor;
+  clip-path: polygon(30% 0, 100% 0, 70% 100%, 0 100%);
+  opacity: .8;
+}
+:is(.secao--azul, .hero, .escuro) .rotulo { color: var(--cinza-claro); }
+
+.titulo { font-size: 46px; margin-top: 20px; color: var(--azul); }
+.titulo em { font-style: normal; color: var(--cinza); }
+:is(.secao--azul, .hero, .escuro) .titulo { color: #fff; }
+:is(.secao--azul, .hero, .escuro) .titulo em { color: #A9ABBD; }
+.texto { font-size: 18px; line-height: 1.65; color: var(--tinta-2); }
+:is(.secao--azul, .escuro) .texto { color: var(--texto-escuro); }
+
+/* cabeça de seção: título à esquerda, texto à direita com o fio vertical (como no mockup) */
+.cabeca { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 64px; align-items: end; }
+.cabeca__lado { padding-left: 32px; border-left: 1px solid rgb(0 0 72 / .16); max-width: 30em; margin-bottom: 6px; }
+:is(.secao--azul, .escuro) .cabeca__lado { border-color: rgb(255 255 255 / .22); }
+
+/* ---------------------------------------------------------------- botões (pílula) */
+.botoes { display: flex; flex-wrap: wrap; gap: 14px; }
+.botao {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 56px;
+  padding: 0 28px;
+  border-radius: 99px;
+  font-size: 16.5px;
+  font-weight: 700;
+  letter-spacing: -.005em;
+  white-space: nowrap;
+  transition: background-color .3s var(--ease-hover), color .3s var(--ease-hover), box-shadow .3s var(--ease-hover), transform .4s var(--ease);
+}
+.botao .i { font-size: 20px; transition: transform .4s var(--ease); }
+.botao:hover .i--seta { transform: translateX(4px); }
+.botao:active { transform: scale(.98); }
+.botao--branco { background: #fff; color: var(--azul); }
+.botao--branco:hover { background: var(--cinza-claro); }
+.botao--azul { background: var(--azul); color: #fff; }
+.botao--azul:hover { background: var(--azul-2); }
+.botao--vidro { color: #fff; background: rgb(255 255 255 / .1); box-shadow: inset 0 0 0 1px rgb(255 255 255 / .34); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); }
+.botao--vidro:hover { background: rgb(255 255 255 / .18); }
+.botao--contorno { box-shadow: inset 0 0 0 1.5px currentColor; }
+.botao--contorno:hover { background: rgb(0 0 72 / .05); }
+:is(.secao--azul, .escuro) .botao--contorno:hover { background: rgb(255 255 255 / .08); }
+
+/* ---------------------------------------------------------------- vidro (cartões no azul) */
+.vidro {
+  background: linear-gradient(160deg, rgb(255 255 255 / .09), rgb(255 255 255 / .03));
+  box-shadow: inset 0 0 0 1px rgb(255 255 255 / .14);
+  border-radius: var(--raio-card);
+}
+
+/* ---------------------------------------------------------------- tablet e celular */
+@media (max-width: 74.99em) {
+  .secao { padding: 88PX 0; }
+  .secao:has(+ .secao--sobe) { padding-bottom: calc(88PX + var(--raio)); }
+  .titulo { font-size: clamp(32PX, 4.8vw, 42PX); }
+  .cabeca { grid-template-columns: 1fr; gap: 22PX; }
+}
+@media (max-width: 47.99em) {
+  html { scroll-padding-top: 72PX; }
+  body { font-size: 16PX; }
+  .secao { padding: 68PX 0; }
+  .secao:has(+ .secao--sobe) { padding-bottom: calc(68PX + var(--raio)); }
+  .titulo { font-size: clamp(26PX, 7.4vw, 32PX); margin-top: 16PX; }
+  .texto { font-size: 16.5PX; }
+  .rotulo { font-size: 11.5PX; letter-spacing: .18em; }
+  .cabeca__lado { padding-left: 18PX; }
+  .botoes { gap: 10PX; }
+  .botoes > .botao { flex: 1 1 auto; }
+  .botao { min-height: 52PX; padding: 0 22PX; font-size: 15.5PX; }
+}

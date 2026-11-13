@@ -1,0 +1,80 @@
+/* ---------------------------------------------------------------- serviços
+   Sobe por cima do hero com os cantos arredondados (base da 0100). Oito cartões em pé (3:4), 4
+   por linha: a foto ocupa o cartão, um vidro azul escuro segura o texto embaixo, o ícone do
+   serviço fica num círculo de vidro no alto e a seta no outro canto (como no mockup). O cartão
+   inteiro é o link do WhatsApp daquele serviço.                                              */
+.cartoes { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-top: 52px; }
+.cartoes > li { display: flex; }
+.cartao {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  border-radius: var(--raio-card);
+  overflow: hidden;
+  background: var(--azul);
+  box-shadow: 0 30px 50px -36px rgb(0 0 46 / .6);
+  isolation: isolate;
+  transition: transform .6s var(--ease), box-shadow .6s var(--ease);
+}
+.cartao__foto { position: absolute; inset: 0; z-index: -2; }
+.cartao__foto picture, .cartao__foto img { width: 100%; height: 100%; object-fit: cover; }
+.cartao__foto img { transition: transform 1.2s var(--ease); }
+.cartao::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  border-radius: inherit;
+  background: linear-gradient(180deg, rgb(0 0 40 / .3) 0%, rgb(0 0 40 / 0) 24%, rgb(0 0 46 / 0) 40%, rgb(0 0 46 / .78) 66%, rgb(0 0 40 / .95) 100%);
+  box-shadow: inset 0 0 0 1px rgb(255 255 255 / .1);
+}
+.cartao__corpo { position: absolute; left: 0; right: 0; bottom: 0; padding: 0 22px 22px; color: #fff; }
+.cartao__titulo { font-size: 19px; line-height: 1.2; color: #fff; }
+.cartao__texto { display: block; margin-top: 10px; font-size: 14px; line-height: 1.5; color: rgb(255 255 255 / .78); }
+.cartao__acao { display: inline-flex; align-items: center; gap: 8px; margin-top: 14px; padding-top: 12px; border-top: 1px solid rgb(255 255 255 / .18); width: 100%; font-size: 13.5px; font-weight: 700; color: #fff; }
+.cartao__icone, .cartao__seta {
+  position: absolute;
+  top: 16px;
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  color: #fff;
+  /* sem backdrop-filter: 16 desfoques sobre foto pesavam no celular; o azul translúcido basta */
+  background: rgb(0 0 46 / .5);
+  box-shadow: inset 0 0 0 1px rgb(255 255 255 / .34);
+}
+.cartao__icone { left: 16px; font-size: 23px; }
+.cartao__seta { right: 16px; font-size: 17px; transition: background-color .35s var(--ease-hover), color .35s var(--ease-hover), transform .5s var(--ease); }
+.cartao:hover { transform: translateY(-6px); box-shadow: 0 40px 60px -34px rgb(0 0 46 / .65); }
+.cartao:hover .cartao__foto img { transform: scale(1.06); }
+.cartao:hover .cartao__seta { background: #fff; color: var(--azul); transform: rotate(45deg); }
+
+/* tablet: 2 por linha. Celular: também 2 por linha, na vertical (pedido do Felipe, 2026-11-11:
+   nada de arrastar pro lado), com o cartão mais compacto: ícone e seta menores e o texto curto */
+@media (max-width: 74.99em) {
+  .cartoes { gap: 14PX; margin-top: 36PX; }
+  .cartao { aspect-ratio: 3 / 4.4; }
+  .cartao__corpo { padding: 0 16PX 16PX; }
+  .cartao__titulo { font-size: 16.5PX; }
+  .cartao__texto { font-size: 13PX; }
+}
+@media (max-width: 63.99em) {
+  .cartoes { grid-template-columns: repeat(2, 1fr); }
+  .cartao { aspect-ratio: 4 / 3.8; }
+}
+@media (max-width: 47.99em) {
+  .cartoes { gap: 10PX; margin-top: 28PX; }
+  .cartao { aspect-ratio: auto; min-height: 290PX; border-radius: 18PX; }
+  .cartao::after { background: linear-gradient(180deg, rgb(0 0 40 / .25) 0%, rgb(0 0 40 / 0) 22%, rgb(0 0 46 / .2) 34%, rgb(0 0 46 / .86) 58%, rgb(0 0 40 / .97) 100%); }
+  .cartao__corpo { padding: 0 12PX 12PX; }
+  .cartao__titulo { font-size: 14PX; line-height: 1.22; }
+  .cartao__texto { margin-top: 6PX; font-size: 11.5PX; line-height: 1.42; }
+  .cartao__acao { margin-top: 10PX; padding-top: 9PX; font-size: 11.5PX; }
+  .cartao__icone, .cartao__seta { top: 10PX; width: 34PX; height: 34PX; }
+  .cartao__icone { left: 10PX; font-size: 18PX; }
+  .cartao__seta { right: 10PX; font-size: 14PX; }
+}

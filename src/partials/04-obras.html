@@ -1,0 +1,46 @@
+<section class="obras secao secao--gelo secao--sobe" id="obras" aria-labelledby="obras-titulo">
+  <div class="caixa">
+    <div class="cabeca">
+      <div>
+        <span class="rotulo" data-revela>Portfólio</span>
+        <h2 class="titulo" id="obras-titulo" data-palavras data-revela="palavras">Serviços realizados <em>em campo.</em></h2>
+      </div>
+      <p class="cabeca__lado texto" data-revela style="--atraso:.15s">Uma seleção de inspeções, calibrações e linhas de vida executadas pela equipe da Ston.</p>
+    </div>
+
+    <!-- filtro: destaca as obras da norma escolhida e apaga as outras, sem mexer no layout
+         (04-obras.js). Sem JS os botões não aparecem e a galeria fica inteira -->
+    <div class="filtros" role="group" aria-label="Filtrar obras por serviço" data-revela data-filtros hidden>
+      <button type="button" class="filtro" aria-pressed="true" data-filtro="todos">Todos</button>
+      <button type="button" class="filtro" aria-pressed="false" data-filtro="nr13">NR-13</button>
+      <button type="button" class="filtro" aria-pressed="false" data-filtro="nr35">NR-35</button>
+      <button type="button" class="filtro" aria-pressed="false" data-filtro="gas">Gás</button>
+      <button type="button" class="filtro" aria-pressed="false" data-filtro="calibracao">Calibração</button>
+      <button type="button" class="filtro" aria-pressed="false" data-filtro="pmoc">PMOC</button>
+    </div>
+
+    <ul class="galeria">
+      <li class="obra obra--grande" data-tipo="nr13" data-revela="grade" style="--i:0">
+        <img data-img="obra-nr13" sizes="(min-width: 75em) 46vw, 92vw" alt="Engenheiro da Ston inspecionando vaso de pressão com manômetro numa indústria" loading="lazy" decoding="async">
+        <div class="obra__legenda"><strong>Inspeção NR-13</strong><span>Vaso de pressão inspecionado com laudo e ART</span></div>
+      </li>
+      <li class="obra" data-tipo="nr35" data-revela="grade" style="--i:1">
+        <img data-img="obra-linha-de-vida" sizes="(min-width: 75em) 22vw, 92vw" alt="Linha de vida horizontal em cobertura metálica com profissional preso por talabarte" loading="lazy" decoding="async">
+        <div class="obra__legenda"><strong>Linha de vida horizontal</strong><span>Cobertura metálica com ancoragens calculadas</span></div>
+      </li>
+      <li class="obra" data-tipo="calibracao" data-revela="grade" style="--i:2">
+        <img data-img="obra-calibracao" sizes="(min-width: 75em) 22vw, 92vw" alt="Válvula de segurança sendo calibrada em bancada com manômetro" loading="lazy" decoding="async">
+        <div class="obra__legenda"><strong>Calibração em bancada</strong><span>Válvula de segurança com certificado</span></div>
+      </li>
+      <li class="obra" data-tipo="gas" data-revela="grade" style="--i:1">
+        <img data-img="obra-estanqueidade" sizes="(min-width: 75em) 22vw, 92vw" alt="Teste de estanqueidade em tubulação de gás amarela com manômetro" loading="lazy" decoding="async">
+        <div class="obra__legenda"><strong>Teste de estanqueidade</strong><span>Tubulação de gás verificada</span></div>
+      </li>
+      <li class="obra" data-tipo="pmoc" data-revela="grade" style="--i:2">
+        <img data-img="obra-pmoc" sizes="(min-width: 75em) 22vw, 92vw" alt="Condensadoras de ar-condicionado vistoriadas para o PMOC na cobertura de um prédio" loading="lazy" decoding="async">
+        <div class="obra__legenda"><strong>PMOC</strong><span>Climatização com plano de manutenção</span></div>
+      </li>
+    </ul>
+    <p class="obras__nota" data-revela>Imagens ilustrativas.</p>
+  </div>
+</section>

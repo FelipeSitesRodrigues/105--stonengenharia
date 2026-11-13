@@ -1,0 +1,497 @@
+{
+ "hero-960.avif": {
+  "w": 960,
+  "h": 540,
+  "kb": 17
+ },
+ "hero-960.webp": {
+  "w": 960,
+  "h": 540,
+  "kb": 26
+ },
+ "hero-1280.avif": {
+  "w": 1280,
+  "h": 720,
+  "kb": 26
+ },
+ "hero-1280.webp": {
+  "w": 1280,
+  "h": 720,
+  "kb": 40
+ },
+ "hero-1672.avif": {
+  "w": 1672,
+  "h": 941,
+  "kb": 38
+ },
+ "hero-1672.webp": {
+  "w": 1672,
+  "h": 941,
+  "kb": 57
+ },
+ "hero-celular-480.avif": {
+  "w": 480,
+  "h": 853,
+  "kb": 15
+ },
+ "hero-celular-480.webp": {
+  "w": 480,
+  "h": 853,
+  "kb": 22
+ },
+ "hero-celular-760.avif": {
+  "w": 760,
+  "h": 1350,
+  "kb": 28
+ },
+ "hero-celular-760.webp": {
+  "w": 760,
+  "h": 1350,
+  "kb": 41
+ },
+ "hero-celular-941.avif": {
+  "w": 941,
+  "h": 1672,
+  "kb": 37
+ },
+ "hero-celular-941.webp": {
+  "w": 941,
+  "h": 1672,
+  "kb": 54
+ },
+ "servico-nr13-400.avif": {
+  "w": 400,
+  "h": 533,
+  "kb": 13
+ },
+ "servico-nr13-400.webp": {
+  "w": 400,
+  "h": 533,
+  "kb": 20
+ },
+ "servico-nr13-560.avif": {
+  "w": 560,
+  "h": 747,
+  "kb": 20
+ },
+ "servico-nr13-560.webp": {
+  "w": 560,
+  "h": 747,
+  "kb": 31
+ },
+ "servico-nr13-768.avif": {
+  "w": 768,
+  "h": 1024,
+  "kb": 30
+ },
+ "servico-nr13-768.webp": {
+  "w": 768,
+  "h": 1024,
+  "kb": 46
+ },
+ "servico-linha-de-vida-400.avif": {
+  "w": 400,
+  "h": 533,
+  "kb": 10
+ },
+ "servico-linha-de-vida-400.webp": {
+  "w": 400,
+  "h": 533,
+  "kb": 18
+ },
+ "servico-linha-de-vida-560.avif": {
+  "w": 560,
+  "h": 747,
+  "kb": 17
+ },
+ "servico-linha-de-vida-560.webp": {
+  "w": 560,
+  "h": 747,
+  "kb": 28
+ },
+ "servico-linha-de-vida-768.avif": {
+  "w": 768,
+  "h": 1024,
+  "kb": 26
+ },
+ "servico-linha-de-vida-768.webp": {
+  "w": 768,
+  "h": 1024,
+  "kb": 43
+ },
+ "servico-estanqueidade-400.avif": {
+  "w": 400,
+  "h": 533,
+  "kb": 12
+ },
+ "servico-estanqueidade-400.webp": {
+  "w": 400,
+  "h": 533,
+  "kb": 21
+ },
+ "servico-estanqueidade-560.avif": {
+  "w": 560,
+  "h": 747,
+  "kb": 19
+ },
+ "servico-estanqueidade-560.webp": {
+  "w": 560,
+  "h": 747,
+  "kb": 32
+ },
+ "servico-estanqueidade-768.avif": {
+  "w": 768,
+  "h": 1024,
+  "kb": 29
+ },
+ "servico-estanqueidade-768.webp": {
+  "w": 768,
+  "h": 1024,
+  "kb": 47
+ },
+ "servico-calibracao-400.avif": {
+  "w": 400,
+  "h": 533,
+  "kb": 12
+ },
+ "servico-calibracao-400.webp": {
+  "w": 400,
+  "h": 533,
+  "kb": 19
+ },
+ "servico-calibracao-560.avif": {
+  "w": 560,
+  "h": 747,
+  "kb": 20
+ },
+ "servico-calibracao-560.webp": {
+  "w": 560,
+  "h": 747,
+  "kb": 31
+ },
+ "servico-calibracao-768.avif": {
+  "w": 768,
+  "h": 1024,
+  "kb": 30
+ },
+ "servico-calibracao-768.webp": {
+  "w": 768,
+  "h": 1024,
+  "kb": 48
+ },
+ "servico-pmoc-400.avif": {
+  "w": 400,
+  "h": 533,
+  "kb": 11
+ },
+ "servico-pmoc-400.webp": {
+  "w": 400,
+  "h": 533,
+  "kb": 18
+ },
+ "servico-pmoc-560.avif": {
+  "w": 560,
+  "h": 747,
+  "kb": 18
+ },
+ "servico-pmoc-560.webp": {
+  "w": 560,
+  "h": 747,
+  "kb": 29
+ },
+ "servico-pmoc-768.avif": {
+  "w": 768,
+  "h": 1024,
+  "kb": 29
+ },
+ "servico-pmoc-768.webp": {
+  "w": 768,
+  "h": 1024,
+  "kb": 44
+ },
+ "servico-projetos-400.avif": {
+  "w": 400,
+  "h": 533,
+  "kb": 12
+ },
+ "servico-projetos-400.webp": {
+  "w": 400,
+  "h": 533,
+  "kb": 18
+ },
+ "servico-projetos-560.avif": {
+  "w": 560,
+  "h": 747,
+  "kb": 19
+ },
+ "servico-projetos-560.webp": {
+  "w": 560,
+  "h": 747,
+  "kb": 29
+ },
+ "servico-projetos-768.avif": {
+  "w": 768,
+  "h": 1024,
+  "kb": 29
+ },
+ "servico-projetos-768.webp": {
+  "w": 768,
+  "h": 1024,
+  "kb": 44
+ },
+ "servico-consultoria-400.avif": {
+  "w": 400,
+  "h": 533,
+  "kb": 10
+ },
+ "servico-consultoria-400.webp": {
+  "w": 400,
+  "h": 533,
+  "kb": 15
+ },
+ "servico-consultoria-560.avif": {
+  "w": 560,
+  "h": 747,
+  "kb": 16
+ },
+ "servico-consultoria-560.webp": {
+  "w": 560,
+  "h": 747,
+  "kb": 23
+ },
+ "servico-consultoria-768.avif": {
+  "w": 768,
+  "h": 1024,
+  "kb": 24
+ },
+ "servico-consultoria-768.webp": {
+  "w": 768,
+  "h": 1024,
+  "kb": 35
+ },
+ "servico-treinamentos-400.avif": {
+  "w": 400,
+  "h": 533,
+  "kb": 11
+ },
+ "servico-treinamentos-400.webp": {
+  "w": 400,
+  "h": 533,
+  "kb": 15
+ },
+ "servico-treinamentos-560.avif": {
+  "w": 560,
+  "h": 747,
+  "kb": 18
+ },
+ "servico-treinamentos-560.webp": {
+  "w": 560,
+  "h": 747,
+  "kb": 24
+ },
+ "servico-treinamentos-768.avif": {
+  "w": 768,
+  "h": 1024,
+  "kb": 28
+ },
+ "servico-treinamentos-768.webp": {
+  "w": 768,
+  "h": 1024,
+  "kb": 40
+ },
+ "obra-nr13-560.avif": {
+  "w": 560,
+  "h": 373,
+  "kb": 15
+ },
+ "obra-nr13-560.webp": {
+  "w": 560,
+  "h": 373,
+  "kb": 25
+ },
+ "obra-nr13-880.avif": {
+  "w": 880,
+  "h": 587,
+  "kb": 30
+ },
+ "obra-nr13-880.webp": {
+  "w": 880,
+  "h": 587,
+  "kb": 47
+ },
+ "obra-nr13-1200.avif": {
+  "w": 1200,
+  "h": 800,
+  "kb": 47
+ },
+ "obra-nr13-1200.webp": {
+  "w": 1200,
+  "h": 800,
+  "kb": 72
+ },
+ "obra-linha-de-vida-560.avif": {
+  "w": 560,
+  "h": 373,
+  "kb": 10
+ },
+ "obra-linha-de-vida-560.webp": {
+  "w": 560,
+  "h": 373,
+  "kb": 16
+ },
+ "obra-linha-de-vida-880.avif": {
+  "w": 880,
+  "h": 587,
+  "kb": 18
+ },
+ "obra-linha-de-vida-880.webp": {
+  "w": 880,
+  "h": 587,
+  "kb": 30
+ },
+ "obra-linha-de-vida-1200.avif": {
+  "w": 1200,
+  "h": 800,
+  "kb": 27
+ },
+ "obra-linha-de-vida-1200.webp": {
+  "w": 1200,
+  "h": 800,
+  "kb": 45
+ },
+ "obra-calibracao-560.avif": {
+  "w": 560,
+  "h": 373,
+  "kb": 14
+ },
+ "obra-calibracao-560.webp": {
+  "w": 560,
+  "h": 373,
+  "kb": 23
+ },
+ "obra-calibracao-880.avif": {
+  "w": 880,
+  "h": 587,
+  "kb": 27
+ },
+ "obra-calibracao-880.webp": {
+  "w": 880,
+  "h": 587,
+  "kb": 43
+ },
+ "obra-calibracao-1200.avif": {
+  "w": 1200,
+  "h": 800,
+  "kb": 43
+ },
+ "obra-calibracao-1200.webp": {
+  "w": 1200,
+  "h": 800,
+  "kb": 65
+ },
+ "obra-estanqueidade-560.avif": {
+  "w": 560,
+  "h": 373,
+  "kb": 14
+ },
+ "obra-estanqueidade-560.webp": {
+  "w": 560,
+  "h": 373,
+  "kb": 23
+ },
+ "obra-estanqueidade-880.avif": {
+  "w": 880,
+  "h": 587,
+  "kb": 26
+ },
+ "obra-estanqueidade-880.webp": {
+  "w": 880,
+  "h": 587,
+  "kb": 42
+ },
+ "obra-estanqueidade-1200.avif": {
+  "w": 1200,
+  "h": 800,
+  "kb": 42
+ },
+ "obra-estanqueidade-1200.webp": {
+  "w": 1200,
+  "h": 800,
+  "kb": 66
+ },
+ "obra-pmoc-560.avif": {
+  "w": 560,
+  "h": 373,
+  "kb": 12
+ },
+ "obra-pmoc-560.webp": {
+  "w": 560,
+  "h": 373,
+  "kb": 20
+ },
+ "obra-pmoc-880.avif": {
+  "w": 880,
+  "h": 587,
+  "kb": 23
+ },
+ "obra-pmoc-880.webp": {
+  "w": 880,
+  "h": 587,
+  "kb": 36
+ },
+ "obra-pmoc-1200.avif": {
+  "w": 1200,
+  "h": 800,
+  "kb": 34
+ },
+ "obra-pmoc-1200.webp": {
+  "w": 1200,
+  "h": 800,
+  "kb": 54
+ },
+ "sobre-640.avif": {
+  "w": 640,
+  "h": 427,
+  "kb": 18
+ },
+ "sobre-640.webp": {
+  "w": 640,
+  "h": 427,
+  "kb": 31
+ },
+ "sobre-960.avif": {
+  "w": 960,
+  "h": 640,
+  "kb": 31
+ },
+ "sobre-960.webp": {
+  "w": 960,
+  "h": 640,
+  "kb": 52
+ },
+ "sobre-1280.avif": {
+  "w": 1280,
+  "h": 853,
+  "kb": 45
+ },
+ "sobre-1280.webp": {
+  "w": 1280,
+  "h": 853,
+  "kb": 75
+ },
+ "logo-claro-480.webp": {
+  "w": 480,
+  "h": 121,
+  "kb": 14
+ },
+ "logo-escuro-480.webp": {
+  "w": 480,
+  "h": 122,
+  "kb": 15
+ },
+ "og.jpg": {
+  "w": 1200,
+  "h": 630,
+  "kb": 60
+ }
+}

@@ -1,0 +1,92 @@
+[
+ {
+  "id": "gerdau",
+  "nome": "Gerdau",
+  "w": 96,
+  "h": 78
+ },
+ {
+  "id": "energisa",
+  "nome": "Energisa",
+  "w": 153,
+  "h": 50
+ },
+ {
+  "id": "unimed",
+  "nome": "Unimed",
+  "w": 148,
+  "h": 51
+ },
+ {
+  "id": "adecoagro",
+  "nome": "Adecoagro",
+  "w": 79,
+  "h": 78
+ },
+ {
+  "id": "petroplus",
+  "nome": "Petroplus",
+  "w": 176,
+  "h": 41
+ },
+ {
+  "id": "frizelo",
+  "nome": "Frizelo Frigoríficos",
+  "w": 118,
+  "h": 65
+ },
+ {
+  "id": "usina-sonora",
+  "nome": "Usina Sonora",
+  "w": 176,
+  "h": 32
+ },
+ {
+  "id": "hvm",
+  "nome": "HVM Incorporadora",
+  "w": 112,
+  "h": 68
+ },
+ {
+  "id": "vetorial",
+  "nome": "Vetorial",
+  "w": 171,
+  "h": 44
+ },
+ {
+  "id": "grupo-pereira",
+  "nome": "Grupo Pereira",
+  "w": 120,
+  "h": 63
+ },
+ {
+  "id": "odfjell",
+  "nome": "Odfjell Terminals Granel Química",
+  "w": 70,
+  "h": 78
+ },
+ {
+  "id": "adames",
+  "nome": "Adames Nutrição Animal",
+  "w": 171,
+  "h": 44
+ },
+ {
+  "id": "rfk",
+  "nome": "Grupo RFK",
+  "w": 139,
+  "h": 55
+ },
+ {
+  "id": "cenze",
+  "nome": "Cenze",
+  "w": 127,
+  "h": 60
+ },
+ {
+  "id": "crea",
+  "nome": "CREA",
+  "w": 74,
+  "h": 78
+ }
+]

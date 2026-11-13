@@ -1,0 +1,33 @@
+/* ---------------------------------------------------------------- TESTE DE FONTE (2026-11-11)
+   Cópia do site com a Plus Jakarta Sans 800 nos títulos, como na Geomon, no lugar da TT
+   Supermolot (estendida). A Jakarta é mais estreita: os títulos sobem de tamanho pra ocupar o
+   mesmo espaço, com o espaçamento apertado da Geomon.                                       */
+h1, h2, h3 { font-weight: 800; letter-spacing: -.028em; line-height: 1.06; }
+.titulo { font-size: 52px; }
+.hero__titulo-linha { max-width: 10.5em; font-size: 66px; line-height: 1.04; }
+.cta__conteudo .titulo { font-size: 50px; }
+.cartao__titulo { font-size: 20px; letter-spacing: -.015em; }
+.ponto__txt b, .prova strong, .obra__legenda strong, .cta__fone, .passo__num, .vantagem__num, .painel__links a { font-weight: 800; letter-spacing: -.015em; }
+.prova strong { font-size: 19px; }
+.passo__num { font-size: 19px; }
+.painel__links a { font-size: 26px; }
+@media (max-width: 74.99em) {
+  .titulo { font-size: clamp(34PX, 5.2vw, 46PX); }
+  .hero__titulo-linha { font-size: clamp(44PX, 6.2vw, 60PX); }
+  .cta__conteudo .titulo { font-size: clamp(32PX, 5.2vw, 44PX); }
+  .cartao__titulo { font-size: 17.5PX; }
+}
+@media (max-width: 47.99em) {
+  .titulo { font-size: clamp(29PX, 8.2vw, 36PX); }
+  .hero__titulo-linha { font-size: clamp(33PX, 9.6vw, 42PX); }
+  .cta__conteudo .titulo { font-size: clamp(29PX, 8.2vw, 36PX); }
+  .cartao__titulo { font-size: 15PX; }
+  .vantagem h3 { font-size: 15.5PX; }
+  .prova strong { font-size: 15.5PX; }
+}
+
+/* "para a indústria" junto também no celular (cabe com a Jakarta) */
+.hero__titulo em { white-space: nowrap; }
+
+/* vírgula e ponto da Jakarta têm recuo largo e o título ficava "Ston ." (memória jakarta-pontuacao-titulo) */
+.pt { margin-left: -.11em; }
