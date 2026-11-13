@@ -1,23 +1,22 @@
 /* ---------------------------------------------------------------- clientes
-   Faixa branca entre o portfólio (gelo) e o "Por que a Ston" (azul). Modelo da 079 Criatto:
-   título à esquerda e a esteira de cartões brancos à direita, entre duas setas redondas. As
-   logos ficam coloridas (pedido do Felipe). O tamanho de cada logo vem do build, pela área,
-   pra uma logo larga e uma quadrada pesarem parecido. Quem pede menos movimento recebe a
-   lista parada, com rolagem de dedo, e as setas andam um cartão.                          */
-.clientes-secao { padding: 88px 0; }
-.clientes-secao__grade { display: grid; grid-template-columns: minmax(0, 380px) minmax(0, 1fr); gap: 56px; align-items: center; }
-.clientes-secao__cab .titulo { font-size: 40px; }
-.clientes-secao__cab .texto { margin-top: 18px; }
+   Faixa branca entre o portfólio (gelo) e o "Por que a Ston" (azul). Título no centro e, embaixo,
+   a esteira de cartões brancos de uma ponta à outra da página, sem setas (pedido do Felipe,
+   2026-11-13). As logos ficam coloridas; o tamanho de cada uma vem do build, pela área, pra
+   uma logo larga e uma quadrada pesarem parecido. Quem pede menos movimento recebe a lista
+   parada, com rolagem de dedo.                                                              */
+.clientes-secao { padding: 96px 0 104px; overflow: hidden; }
+.clientes-secao__cab { display: grid; justify-items: center; text-align: center; }
+.clientes-secao__cab .titulo { font-size: 44px; }
+.clientes-secao__cab .texto { max-width: 34em; margin-top: 18px; }
 
-.clientes { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 14px; min-width: 0; }
+.clientes { margin-top: 52px; }
 .clientes__janela {
-  min-width: 0;
   overflow: hidden;
   padding-block: 14px 30px;
   margin-block: -14px -30px;
-  /* bordas somem num degradê; a ponta já é transparente 2 px antes do fim (máscara em pixel fracionado) */
-  -webkit-mask-image: linear-gradient(90deg, transparent 0 2PX, #000 56px, #000 calc(100% - 56px), transparent calc(100% - 2PX));
-  mask-image: linear-gradient(90deg, transparent 0 2PX, #000 56px, #000 calc(100% - 56px), transparent calc(100% - 2PX));
+  /* as pontas somem num degradê curto; a borda já é transparente 2 px antes do fim (máscara em pixel fracionado) */
+  -webkit-mask-image: linear-gradient(90deg, transparent 0 2PX, #000 7%, #000 93%, transparent calc(100% - 2PX));
+  mask-image: linear-gradient(90deg, transparent 0 2PX, #000 7%, #000 93%, transparent calc(100% - 2PX));
 }
 .clientes__trilho { display: flex; gap: 16px; width: max-content; }
 .cliente {
@@ -36,35 +35,16 @@
 @media (hover: hover) {
   .cliente:hover { transform: translateY(-3px); box-shadow: inset 0 0 0 1px var(--linha-clara), 0 24px 40px -24px rgb(0 0 46 / .5); }
 }
-.clientes__seta {
-  display: grid;
-  place-items: center;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  font-size: 20px;
-  color: var(--azul);
-  background: var(--branco);
-  box-shadow: inset 0 0 0 1.5PX var(--azul);
-  transition: transform .3s var(--ease), background-color .3s var(--ease-hover), color .3s var(--ease-hover);
-}
-.clientes__seta:hover { background: var(--azul); color: #fff; }
-.clientes__seta:active { transform: scale(.94); }
-/* sem esteira (menos movimento): a janela rola no dedo e as setas andam um cartão */
-.clientes--parado .clientes__janela { overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; -webkit-mask-image: none; mask-image: none; }
+/* sem esteira (menos movimento): a janela rola no dedo */
+.clientes--parado .clientes__janela { overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-inline: 16PX; padding-inline: 16PX; scrollbar-width: none; -webkit-mask-image: none; mask-image: none; }
 .clientes--parado .clientes__janela::-webkit-scrollbar { display: none; }
 .clientes--parado .cliente { scroll-snap-align: start; }
 
-@media (max-width: 74.99em) {
-  .clientes-secao__grade { grid-template-columns: minmax(0, 1fr); gap: 36PX; }
-}
 @media (max-width: 47.99em) {
-  .clientes-secao { padding: 64PX 0; }
+  .clientes-secao { padding: 64PX 0 72PX; }
   .clientes-secao__cab .titulo { font-size: 30PX; }
-  .clientes { grid-template-columns: 1fr 1fr; grid-template-areas: 'janela janela' 'ant prox'; row-gap: 18PX; }
-  .clientes__janela { grid-area: janela; }
-  .clientes__seta--ant { grid-area: ant; justify-self: start; }
-  .clientes__seta--prox { grid-area: prox; justify-self: end; }
-  .cliente { width: 172PX; height: 104PX; padding: 14PX; }
-  .cliente img { width: auto; max-height: 64PX; }
+  .clientes { margin-top: 36PX; }
+  .clientes__trilho { gap: 12PX; }
+  .cliente { width: 156PX; height: 96PX; padding: 14PX; }
+  .cliente img { width: auto; max-height: 60PX; }
 }
